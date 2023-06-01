@@ -8,24 +8,43 @@ Data source: https://www.kaggle.com/competitions/home-credit-default-risk/data
 ## Data preprocessing and modeling 
 
 •	Data preparation and preprocessing  
+
  o Data merging and grouping by
+ 
  o Encoding categorical features 
+ 
  o	Handeling missing data by elimination of columns and row containing excessive Nan values
+
 •	Features selection and features engineering : Kaggle kernel
+
 •	Data split : train and test sets and drift data
+
 •	Handeling unbalanced classes.
+
 •	Data transformation : Standard scalering
+
 •	Model training : 
- o	Creation of Mlflow experiment tracker
- o	1st experiment : Dummy classfier, that helped as resference for other classifiers 
- o	2nd experiment : XGBoost classifier
- o	3rd experiment LGBM classifier
- o	4th experiment Catboost classifier
- o	5th experiment Random forest classifier 
- o	6th experiment : Stacking model of the XGBoost classfier, LGBM classifier, Catboost classifier and Random Forest classfier .
- o	7th experiment Pipeline of data transformation by standard scalering and the stacking model.
+
+o	Creation of Mlflow experiment tracker
+
+o	1st experiment : Dummy classfier, that helped as resference for other classifiers 
+
+o	2nd experiment : XGBoost classifier
+
+o	3rd experiment LGBM classifier
+
+o	4th experiment Catboost classifier
+
+o	5th experiment Random forest classifier 
+
+o	6th experiment : Stacking model of the XGBoost classfier, LGBM classifier, Catboost classifier and Random Forest classfier .
+
+o	7th experiment Pipeline of data transformation by standard scalering and the stacking model.
+
 •	Model analysis and features importance identification for each of the main models .
+
 •	Registering all the 7th experiments to Mlflow registry.
+
 •	Serving and saving the best model under .pkl format, to be ready for production readiness.
 
 ## Unbalanced classes handeling 
