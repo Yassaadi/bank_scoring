@@ -1,8 +1,11 @@
 # bank_scoring
-![image](https://github.com/Yassaadi/bank_scoring/assets/106546639/45b0970c-bccd-4b58-a354-a73325509c29)
-ASSAADI YASSINE : PROJECT 7 RECAP
-1.	Model training 
+ASSAADI YASSINE : SCORING PROJECT RECAP
 
+Data source: https://www.kaggle.com/competitions/home-credit-default-risk/data
+
+![image](https://github.com/Yassaadi/bank_scoring/assets/106546639/45b0970c-bccd-4b58-a354-a73325509c29)
+
+1.	Model training 
 
 •	Data preparation and preprocessing : 
 •	Data merging and grouping by, Encoding categorical features,, 
@@ -30,6 +33,7 @@ Unbalanced data can lead to biased models that perform poorly on the minority cl
 ![image](https://github.com/Yassaadi/bank_scoring/assets/106546639/c022f080-aa50-4f19-b762-d5ffeb40bd15)
 
 In my case, I tried many combinaison of oversampling and undersampling, SMOTE with 10% strategy and randomized undersampling with 10% were chosen, this means that the data was oversampled using SMOTE to increase the number of instances in the minority class, while also randomly undersampling the majority class to reduce its dominance in the data. This approach can help to improve model performance by providing more balanced training data that better represents the underlying distribution of the problem. Additionally, the use of a 10% strategy means that only a portion of the data was affected by the resampling technique, which can help to mitigate potential issues related to overfitting or loss of important information.
+
 ![image](https://github.com/Yassaadi/bank_scoring/assets/106546639/65b40e51-8238-46be-bfae-14556e22078b)
 
 
@@ -38,6 +42,7 @@ In my case, I tried many combinaison of oversampling and undersampling, SMOTE wi
 The financial impact of false negative is very hiegh according to the manager. Ten times higher than the impact of false positive which represents good clients predicted as bad profiles. It is then important appropriate metrics to select the best model.
 In the context described, the metric of choice should be one that prioritizes minimizing false negatives, as the financial impact of these errors is very high. This is where ROC AUC (Receiver Operating Characteristic Area Under the Curve) can be a more appropriate metric to use than accuracy.
 Accuracy simply measures the percentage of correct predictions made by the model, without considering the balance of false positives and false negatives. However, in cases where the cost of false negatives is much higher than that of false positives, accuracy can be a misleading metric to use as it may favor models that produce more false positives in order to minimize false negatives. A dummy classifier can appear very promoting if we only rely on accuracy for examples :
+
 ![image](https://github.com/Yassaadi/bank_scoring/assets/106546639/93e106e7-98d8-48d1-9d12-402c33998fc3)
 
 
@@ -54,6 +59,7 @@ I chosed also Fcb = F(=10) as a metric which is a way to stand up between rec
 The best model correspond to the stacking model :
 
 ![image](https://github.com/Yassaadi/bank_scoring/assets/106546639/00ece513-ed44-4aba-82b2-0481e734ec2d)
+
 
 ![image](https://github.com/Yassaadi/bank_scoring/assets/106546639/c73c1730-663f-44da-a8e0-19c250ef70a6)
 
