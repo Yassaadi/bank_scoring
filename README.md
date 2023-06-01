@@ -60,15 +60,17 @@ In this project, I tried various combinations of oversampling and undersampling 
 
 ## Metrics 
 
-The financial impact of false negative is very hiegh according to the manager. Ten times higher than the impact of false positive which represents good clients predicted as bad profiles. It is then important appropriate metrics to select the best model.
-In the context described, the metric of choice should be one that prioritizes minimizing false negatives, as the financial impact of these errors is very high. This is where ROC AUC (Receiver Operating Characteristic Area Under the Curve) can be a more appropriate metric to use than accuracy.
-Accuracy simply measures the percentage of correct predictions made by the model, without considering the balance of false positives and false negatives. However, in cases where the cost of false negatives is much higher than that of false positives, accuracy can be a misleading metric to use as it may favor models that produce more false positives in order to minimize false negatives. A dummy classifier can appear very promoting if we only rely on accuracy for examples :
+The manager has highlighted that the financial impact of false negatives is very high, ten times higher than the impact of false positives, which refers to good clients being predicted as bad profiles. Therefore, it is crucial to select appropriate metrics to determine the best model.
+
+In the described context, the chosen metric should prioritize minimizing false negatives due to their significant financial impact. In this regard, ROC AUC (Receiver Operating Characteristic Area Under the Curve) is a more suitable metric than accuracy.
+
+Accuracy measures the percentage of correct predictions made by the model without considering the balance between false positives and false negatives. However, in cases where the cost of false negatives is much higher than that of false positives, accuracy can be misleading as it may favor models that produce more false positives to minimize false negatives. Relying solely on accuracy can lead to a dummy classifier appearing highly effective, as shown below:
 
 ![image](https://github.com/Yassaadi/bank_scoring/assets/106546639/93e106e7-98d8-48d1-9d12-402c33998fc3)
 
+On the other hand, ROC AUC considers the trade-off between the true positive rate and false positive rate at different classification thresholds, providing a measure of the model's overall predictive power. By examining the entire ROC curve and the area under it, a more comprehensive understanding of the model's ability to accurately classify cases and make reliable predictions is obtained.
 
-On the other hand, ROC AUC takes into account the trade-off between true positive rate and false positive rate at different classification thresholds, and provides a measure of the overall predictive power of the model. By looking at the entire ROC curve and the area under it, it gives a more complete picture of the model's ability to correctly classify cases and make good predictions.
-I chosed also Fcb = F(beta=10) as a metric which is a way to stand up between recall and precision by giving 10 times importance to FN  impact than FP impact. A total importance. of FP is a F(beta=0)=Precision.
+Additionally, I have chosen Fcb = F(beta=10) as a metric, which strikes a balance between recall and precision by assigning ten times more importance to the impact of false negatives (FN) compared to false positives (FP). The total importance of FP is represented by F(beta=0), which is equivalent to precision.
 
 ## Modeling experiences tracking 
 
@@ -91,8 +93,9 @@ The best model correspond to the stacking model :
 
 ## Drift monitoring 
 
-Data drift is the phenomenon where the statistical properties of data change over time, which can cause models to become less accurate if they are not adapted to the new data distribution. In our case I performed a data drift monitoring using evidently library by taking as reference data my current training data and production data the application test data given by the manager.
-The drift is calculated using Jensen-Shannon Divergence (JSD) and Wasserstein Distance. Only one features represents drift in my set of tested features, this drift is estimated to 14,29% which has no impact on model retraining.
+Data drift refers to the phenomenon where the statistical properties of data change over time. If models are not adapted to the new data distribution, they can become less accurate. In our case, I performed data drift monitoring using the evidently library, using my current training data as the reference and the application test data provided by the manager as the production data.
+
+To quantify data drift, I calculated the Jensen-Shannon Divergence (JSD) and Wasserstein Distance. Among the set of tested features, only one feature exhibited drift. The calculated drift for this feature was estimated to be 14.29%. Fortunately, this drift has no significant impact on model retraining, indicating that the model can still perform effectively without requiring adjustments due to the observed data drift.
 
 ![image](https://github.com/Yassaadi/bank_scoring/assets/106546639/d828fb87-c0a7-4574-8860-c90a2a8e436c)
 
