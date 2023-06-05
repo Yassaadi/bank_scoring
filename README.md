@@ -1,6 +1,5 @@
 # bank_scoring
-ASSAADI YASSINE : SCORING PROJECT RECAP
-
+# ASSAADI YASSINE : SCORING PROJECT RECAP
 Data source: https://www.kaggle.com/competitions/home-credit-default-risk/data
 
 # Objective
