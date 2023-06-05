@@ -3,6 +3,20 @@ ASSAADI YASSINE : SCORING PROJECT RECAP
 
 Data source: https://www.kaggle.com/competitions/home-credit-default-risk/data
 
+# Objective
+The company wishes to implement a "credit scoring" tool to calculate the probability of a client repaying their credit and classify loan applications as approved or denied. They aim to develop a classification algorithm that leverages various data sources, including behavioral data and information from other financial institutions.
+
+Furthermore, customer relationship managers have expressed that clients increasingly seek transparency regarding credit approval decisions. This demand for transparency aligns with the values the company wants to embody.
+
+Therefore, the company has decided to develop an interactive dashboard that enables relationship managers to explain credit approval decisions in the most transparent manner possible. Additionally, the dashboard will allow clients to access and easily explore their personal information.
+
+# Mission
+Build a scoring model that automatically predicts the probability of a client's bankruptcy.
+
+Develop an interactive dashboard for customer relationship managers to interpret the predictions made by the model and enhance their understanding of the clients.
+
+Deploy the prediction scoring model using an API, as well as the interactive dashboard that calls the API for predictions.
+
 ![image](https://github.com/Yassaadi/bank_scoring/assets/106546639/45b0970c-bccd-4b58-a354-a73325509c29)
 
 ## Data preprocessing and modeling 
