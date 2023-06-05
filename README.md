@@ -108,6 +108,8 @@ To quantify data drift, I calculated the Jensen-Shannon Divergence (JSD) and Was
 
 ## Streamlit app deployement on Azure services
 
+![image](https://github.com/Yassaadi/bank_scoring/assets/106546639/a6a6088b-6962-4283-960a-3d7ae3466398)
+
 
 
 
