@@ -1,6 +1,6 @@
 # bank_scoring
 # ASSAADI YASSINE : SCORING PROJECT RECAP
-Data source: https://www.kaggle.com/competitions/home-credit-default-risk/data
+
 
 # Objective
 The company wishes to implement a "credit scoring" tool to calculate the probability of a client repaying their credit and classify loan applications as approved or denied. They aim to develop a classification algorithm that leverages various data sources, including behavioral data and information from other financial institutions.
